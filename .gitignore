@@ -1,2 +1,5 @@
 viminfo
 netrwhist
+bundle/*
+!bundle/vundle
+
