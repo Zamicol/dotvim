@@ -3,4 +3,12 @@ Zamicol's Vim Configuration
 
 Not much to see here. :)
 #Installation
-git clone https://github.com/Zamicol/dotvim.git ~/.vim
+Install and initilize the submodules
+```sh
+while true; if [ ! -d "$HOME/.vim" ]; then ( cd ~/; git clone <stuff>; cd ~/.vim; git submodule init; git submodule update; ) fi
+```
+
+Installation without initilization of the submodules
+```sh
+git clone git://github.com/Zamicol/dotvim.git ~/.vim
+```

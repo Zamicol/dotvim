@@ -20,6 +20,9 @@ Bundle 'scrooloose/syntastic'
 
 Bundle 'bling/vim-airline'
 
+"install bundles:
+":BundleInstall!
+
 syntax on
 set encoding=utf-8
 
