@@ -9,6 +9,7 @@ if [ ! -d "$HOME/.vim" ]; then ( cd ~/; git clone git://github.com/Zamicol/dotvi
 ```
 
 
+
 Installation without initilization of the submodules
 ```sh
 git clone git://github.com/Zamicol/dotvim.git ~/.vim
