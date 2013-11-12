@@ -1,5 +1,9 @@
+"In addition to the following settings,
+"-map caps lock as an additional ctrl key.  
+
 set nocompatible
 filetype off
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -12,16 +16,17 @@ nmap <Leader>bc :BundleClean<CR>
 "Vundle manage Vundle
 "required! 
 Bundle 'gmarik/vundle'
-
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-
 Bundle 'scrooloose/syntastic'
-
 Bundle 'bling/vim-airline'
 
-"install bundles:
-":BundleInstall!
+"See if nerdtree is installed.  If not, porbally nothing else it/
+"run BundleInstall to fix this issue.
+let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
+if !filereadable(nerd_readme)
+	:BundleInstall
+endif
 
 syntax on
 set encoding=utf-8
@@ -54,6 +59,9 @@ let g:airline_paste_symbol = 'Þ'
 
 "Autoindent
 set autoindent
+
+"not sure if this even does anything at this point
+filetype indent plugin on
 
 "Set the tab size to 4
 set tabstop=4
