@@ -62,6 +62,9 @@ let g:airline_paste_symbol = 'Þ'
 "Autoindent
 set autoindent
 
+"Stop crazy tabbing on paste
+:set paste!
+
 "not sure if this even does anything at this point
 filetype indent plugin on
 
