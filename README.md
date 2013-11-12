@@ -6,12 +6,16 @@ Not much to see here. :)
 
 Install using git/ssh and initilize submodules
 ```sh
-if [ ! -d "$HOME/.vim" ]; then ( cd ~/; git clone git://github.com/Zamicol/dotvim.git ~/.vim; cd ~/.vim; git submodule init; git submodule update; ) fi
+if [ ! -d "$HOME/.vim" ]; then ( 
+  cd ~/; git clone git://github.com/Zamicol/dotvim.git ~/.vim; 
+  cd ~/.vim; git submodule init; git submodule update; ) fi
 ```
 
 Install using https and initilize submodules
 ```sh
-if [ ! -d "$HOME/.vim" ]; then ( cd ~/; git clone https://github.com/Zamicol/dotvim.git ~/.vim; cd ~/.vim; git submodule init; git submodule update; ) fi
+if [ ! -d "$HOME/.vim" ]; then ( 
+  cd ~/; git clone https://github.com/Zamicol/dotvim.git ~/.vim; 
+  cd ~/.vim; git submodule init; git submodule update; ) fi
 ```
 
 
