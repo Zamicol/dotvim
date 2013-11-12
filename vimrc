@@ -25,7 +25,9 @@ Bundle 'bling/vim-airline'
 "run BundleInstall to fix this issue.
 let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
 if !filereadable(nerd_readme)
+	echo "Installing Bundles"
 	:BundleInstall
+	:q
 endif
 
 syntax on
