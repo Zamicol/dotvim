@@ -1,9 +1,9 @@
-"In addition to the following settings,
-"-map caps lock as an additional ctrl key.  
+"In addition to the following settings
+"I suggest:
+"--map caps lock as an additional ctrl key system wide.  
 
 set nocompatible
 filetype off
-
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -21,12 +21,12 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 
-"See if nerdtree is installed.  If not, porbally nothing else it/
-"run BundleInstall to fix this issue.
+"See if nerdtree is installed.  If not, probably nothing else is
 let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
 if !filereadable(nerd_readme)
 	echo "Installing Bundles"
 	:BundleInstall
+	"close out window bundleinstall opens
 	:q
 endif
 
