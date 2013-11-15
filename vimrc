@@ -49,7 +49,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=1
 let g:airline_enable_syntastic=1
 let g:airline_enable_fugitive=1
-let g:airline_theme='dark'
+let g:airline_theme='light'
 
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
@@ -77,4 +77,10 @@ inoremap jj <ESC>
 
 "start NERDTree on startup and change focus to window
 autocmd VimEnter * NERDTreeTabsOpen
+let NERDTreeShowBookmarks=1
 autocmd VimEnter * wincmd w
+
+"Colorscheme.  Be kind to the colorblind!
+if has("gui_running")
+	colorscheme cobalt
+endif
