@@ -70,7 +70,7 @@ set pastetoggle=<F2>
 filetype indent plugin on
 
 "Set the tab size to 4
-set tabstop=4
+set tabstop=2
 
 "enter back into command mode using shorter commands
 inoremap jj <ESC>
@@ -84,3 +84,8 @@ autocmd VimEnter * wincmd w
 if has("gui_running")
 	colorscheme cobalt
 endif
+
+"Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs=1
