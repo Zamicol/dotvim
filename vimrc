@@ -64,7 +64,11 @@ set autoindent
 
 "Stop crazy tabbing on paste
 ":set paste!
-set pastetoggle=<F2>
+set pastetoggle=<F4>
+
+"sessions
+map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
+map <F3> :source ~/vim_session <cr>     " And load session with F3
 
 "not sure if this even does anything at this point
 filetype indent plugin on
