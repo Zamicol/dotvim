@@ -4,6 +4,8 @@ Zamicol's Vim Configuration
 Not much to see here. :)
 #Installation
 
+
+
 Install using git/ssh and initilize submodules
 ```sh
 if [ ! -d "$HOME/.vim" ]; then ( 
@@ -24,3 +26,10 @@ Installation without initilization of the submodules
 ```sh
 git clone https://github.com/Zamicol/dotvim.git ~/.vim
 ```
+
+
+Then make a symbolic link to the vimrc file in your home directory.  
+
+````ln -s ~/.vim/vimrc ~/.vimrc````
+
+
