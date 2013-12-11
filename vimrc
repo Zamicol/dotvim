@@ -76,6 +76,15 @@ filetype indent plugin on
 "Set the tab size to 4
 set tabstop=2
 
+" vim tabs
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+
 "enter back into command mode using shorter commands
 inoremap jj <ESC>
 
