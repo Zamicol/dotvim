@@ -86,6 +86,9 @@ inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 
+"Laziness extreme!
+nnoremap ; :
+
 "enter back into command mode using shorter commands
 inoremap jj <ESC>
 
