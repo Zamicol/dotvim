@@ -97,6 +97,11 @@ autocmd VimEnter * NERDTreeTabsOpen
 let NERDTreeShowBookmarks=1
 autocmd VimEnter * wincmd w
 
+"copy and paste in gvim
+nmap <C-V> "+gP
+imap <C-V> <ESC><C-V>i
+vmap <C-C> "+y
+
 "Colorscheme.  Be kind to the colorblind!
 if has("gui_running")
 	colorscheme cobalt
