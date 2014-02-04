@@ -20,7 +20,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'mattn/emmet-vim'
+Bundle 'Blackrush/vim-gocode'
 
 "See if nerdtree is installed.  If not, probably nothing else is
 let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
@@ -111,3 +111,12 @@ endif
 let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
+
+
+"go
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+  filetype off
+  filetype plugin indent off
+  set runtimepath+=$GOROOT/misc/vim
+  filetype plugin indent on
+  syntax on
