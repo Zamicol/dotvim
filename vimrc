@@ -34,6 +34,9 @@ endif
 syntax on
 set encoding=utf-8
 
+"display line numbers
+:set number
+
 "change leader to ,
 let mapleader = ","
 
