@@ -2,6 +2,7 @@
 "I suggest:
 "--map caps lock as an additional ctrl key system wide.  
 
+
 set nocompatible
 filetype off
 
