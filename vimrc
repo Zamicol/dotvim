@@ -37,7 +37,10 @@ set encoding=utf-8
 
 "display line numbers
 :set number
+"display line cursor is on
+:set cursorline
 
+highlight Cursor guifg=white guibg=white
 "change leader to ,
 let mapleader = ","
 
@@ -45,7 +48,8 @@ let mapleader = ","
 set autoread
 
 "Highlight variable under the cursor
-:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+":autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+:set hlsearch
 
 "Show line numbers
 ":set number
