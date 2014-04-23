@@ -97,6 +97,10 @@ nnoremap ; :
 "enter back into command mode using shorter commands
 inoremap jj <ESC>
 
+"fast exit using qq
+nnoremap QQ :q!<CR>
+inoremap QQ <ESC>:q!<CR>
+
 "start NERDTree on startup and change focus to window
 "autocmd VimEnter * NERDTreeTabsOpen
 "let NERDTreeShowBookmarks=1
@@ -125,3 +129,6 @@ let g:syntastic_enable_signs=1
   set runtimepath+=$GOROOT/misc/vim
   filetype plugin indent on
   syntax on
+
+	"qbit hack - save as root
+	command! -bar -nargs=0 W  silent! exec "write !sudo tee % >/dev/null"  | silent! edit!
