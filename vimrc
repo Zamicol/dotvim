@@ -51,9 +51,6 @@ set autoread
 ":autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 :set hlsearch
 
-"Show line numbers
-":set number
-
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=1
 let g:airline_enable_syntastic=1
@@ -101,9 +98,9 @@ nnoremap ; :
 inoremap jj <ESC>
 
 "start NERDTree on startup and change focus to window
-autocmd VimEnter * NERDTreeTabsOpen
-let NERDTreeShowBookmarks=1
-autocmd VimEnter * wincmd w
+"autocmd VimEnter * NERDTreeTabsOpen
+"let NERDTreeShowBookmarks=1
+"autocmd VimEnter * wincmd w
 
 "copy and paste in gvim
 nmap <C-V> "+gP
