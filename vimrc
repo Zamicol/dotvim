@@ -107,8 +107,9 @@ inoremap QQ <ESC>:q!<CR>
 "autocmd VimEnter * wincmd w
 
 "copy and paste in gvim
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
+"conflicts with visual block.  use f4
+"nmap <C-V> "+gP
+"imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
 
 "Colorscheme.  Be kind to the colorblind!
@@ -133,5 +134,3 @@ let g:syntastic_enable_signs=1
 	"qbit hack - save as root
 	command! -bar -nargs=0 W  silent! exec "write !sudo tee % >/dev/null"  | silent! edit!
 
-	"Stop the silly read only warning
-set autoread	
