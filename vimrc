@@ -37,10 +37,12 @@ set encoding=utf-8
 
 "display line numbers
 :set number
+
 "display line cursor is on
 :set cursorline
 
 highlight Cursor guifg=white guibg=white
+
 "change leader to ,
 let mapleader = ","
 
@@ -79,7 +81,7 @@ map <F3> :source ~/vim_session <cr>     " And load session with F3
 "not sure if this even does anything at this point
 filetype indent plugin on
 
-"Set the tab size to 4
+"Set the tab size 
 set tabstop=2
 
 " vim tabs
@@ -130,5 +132,11 @@ let g:syntastic_enable_signs=1
   filetype plugin indent on
   syntax on
 
-	"qbit hack - save as root
-	command! -bar -nargs=0 W  silent! exec "write !sudo tee % >/dev/null"  | silent! edit!
+"qbit hack - save as root using :W
+command! -bar -nargs=0 W  silent! exec "write !sudo tee % >/dev/null"  | silent! edit!
+
+"Bash like line navigation
+:map <C-a> <Home>
+:map <C-e> <End>
+"draw the screen with the current line at the top (like bash clear)
+:map <C-l> zt
