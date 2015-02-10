@@ -19,15 +19,12 @@ if [ ! -d "$HOME/.vim" ]; then (
   cd ~/; git clone git://github.com/Zamicol/dotvim.git ~/.vim; 
   cd ~/.vim; git submodule init; git submodule update; ) fi
 ```
-
 2. Install using https and initilize submodules
 ```sh
 if [ ! -d "$HOME/.vim" ]; then ( 
   cd ~/; git clone https://github.com/Zamicol/dotvim.git ~/.vim; 
   cd ~/.vim; git submodule init; git submodule update; ) fi
 ```
-
-
 3. Installation without initilization of the submodules
 ```sh
 git clone https://github.com/Zamicol/dotvim.git ~/.vim
