@@ -22,6 +22,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'fatih/vim-go'
 
 "See if nerdtree is installed.  If not, probably nothing else is
 let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
