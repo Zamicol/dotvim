@@ -1,37 +1,49 @@
 "In addition to the following settings
 "I suggest:
-"--map caps lock as an additional ctrl key system wide.  
-
+"--map caps lock as an additional ctrl key system wide.
 
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-nmap <Leader>bi :BundleInstall<CR>
-nmap <Leader>bi! :BundleInstall!<CR>
-nmap <Leader>bu :BundleInstall!<CR>
-nmap <Leader>bc :BundleClean<CR>
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-"Vundle manage Vundle
-"required! 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'fatih/vim-go'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 
 "See if nerdtree is installed.  If not, probably nothing else is
-let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
-if !filereadable(nerd_readme)
-	echo "Installing Bundles"
-	:BundleInstall
-	"close out window bundleinstall opens
-	:q
-endif
+"let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
+"if !filereadable(nerd_readme)
+"	echo "Installing Bundles"
+"	:BundleInstall
+"	"close out window bundleinstall opens
+"	:q
+"endif
 
 syntax on
 set encoding=utf-8
@@ -82,7 +94,7 @@ map <F3> :source ~/vim_session <cr>     " And load session with F3
 "not sure if this even does anything at this point
 filetype indent plugin on
 
-"Set the tab size 
+"Set the tab size
 set tabstop=2
 
 " vim tabs
