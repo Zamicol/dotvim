@@ -37,13 +37,13 @@ filetype plugin indent on    " required
 
 
 "See if nerdtree is installed.  If not, probably nothing else is
-"let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
-"if !filereadable(nerd_readme)
-"	echo "Installing Bundles"
-"	:BundleInstall
-"	"close out window bundleinstall opens
-"	:q
-"endif
+let nerd_readme=expand('~/.vim/bundle/nerdtree/README.markdown')
+if !filereadable(nerd_readme)
+	echo "Installing Bundles"
+	:PluginInstall
+	"close out window bundleinstall opens
+	:q
+endif
 
 syntax on
 set encoding=utf-8
